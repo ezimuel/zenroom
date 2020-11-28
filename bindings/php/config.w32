@@ -1,0 +1,7 @@
+ARG_ENABLE('zenroom', 'zenroom support', 'no');
+
+if (PHP_ZENROOM != 'no') {
+	AC_DEFINE('HAVE_ZENROOM', 1, 'zenroom support enabled');
+
+	EXTENSION('zenroom', 'zenroom.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
